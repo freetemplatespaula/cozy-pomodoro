@@ -53,7 +53,7 @@
 <body>
   <main>
     <h1>Privacy Policy for Cozy Pomodoro Garden</h1>
-    <p class="updated"><strong>Effective date:</strong> June 9, 2026</p>
+    <p class="updated"><strong>Effective date:</strong> June 10, 2026</p>
 
     <p>
       This Privacy Policy explains how Cozy Pomodoro Garden ("the App") handles
@@ -64,28 +64,29 @@
     <h2>Information handled by the App</h2>
     <p>
       The App does not ask for your name, email address, phone number, contacts,
-      precise location, advertising identifier, or payment information.
+      precise location, advertising identifier, photos, or payment information.
     </p>
     <p>
-      The App stores focus-session statistics and a randomly generated
-      installation identifier in its private storage on your device. The
-      installation identifier is not derived from a hardware identifier and is
-      used only to create and maintain an anonymous multiplayer account.
+      The App may store timer choices, focus-session statistics, and a randomly
+      generated installation identifier in its private storage on your device.
+      The installation identifier is not derived from a hardware identifier and
+      is used only to create and maintain an anonymous multiplayer account.
     </p>
 
     <h2>Multiplayer data</h2>
     <p>
-      When you use an online room, the App sends the random installation
-      identifier and gameplay data to our multiplayer service. Gameplay data may
-      include your selected character, room membership, session duration, room
-      code, reactions, and technical session identifiers needed to operate and
-      secure the room.
+      When you use an online room, the App uses Firebase Authentication with
+      anonymous sign-in and Firebase Realtime Database to operate multiplayer
+      rooms. Multiplayer data may include a temporary anonymous Firebase user
+      ID, selected character, room membership, room position, session duration,
+      room code, room timestamps, reactions, and pause or status indicators.
     </p>
     <p>
       Other room participants receive only limited gameplay information, such as
-      the selected character, room position, and reactions. They do not receive
-      your installation identifier, account identifier, authentication tokens,
-      email address, or device hardware identifiers.
+      the selected character, room position, status, and reactions. They do not
+      receive your installation identifier, authentication tokens, email
+      address, phone number, advertising identifier, or device hardware
+      identifiers.
     </p>
 
     <h2>How information is used</h2>
@@ -93,18 +94,18 @@
     <ul>
       <li>provide focus timers and local progress statistics;</li>
       <li>create, find, and join multiplayer rooms;</li>
-      <li>synchronize room timing, participants, and reactions;</li>
-      <li>prevent abuse and protect the multiplayer service; and</li>
+      <li>synchronize room timing, participants, statuses, and reactions;</li>
+      <li>prevent abuse and protect multiplayer rooms; and</li>
       <li>diagnose service failures and maintain security.</li>
     </ul>
 
     <h2>Sharing and third-party services</h2>
     <p>
       We do not sell personal information and do not use it for advertising. The
-      App uses Nakama multiplayer technology and the hosting infrastructure on
-      which the multiplayer service is deployed. These service providers may
+      App uses Google Firebase services to provide anonymous authentication,
+      multiplayer room storage, and secure room synchronization. Firebase may
       process network and technical information, including IP addresses and
-      server logs, as necessary to deliver and secure the service.
+      service logs, as necessary to deliver and secure the service.
     </p>
     <p>
       The App can open your device's sharing interface or external apps such as
@@ -125,9 +126,10 @@
     <p>
       Local focus statistics and the random installation identifier remain on
       your device until you clear the App's data or uninstall the App.
-      Short-lived room records expire after they are no longer needed to operate
-      the room. Security and operational logs may be retained for a limited
-      period as necessary to protect and maintain the service.
+      Short-lived room records are designed for Pomodoro sessions and expire
+      after they are no longer needed to operate the room. Firebase operational
+      and security logs may be retained for a limited period as necessary to
+      protect and maintain the service.
     </p>
     <p>
       To request deletion of server-side data associated with your anonymous
@@ -145,10 +147,11 @@
 
     <h2>Security</h2>
     <p>
-      Production multiplayer connections are encrypted in transit using HTTPS
-      and secure WebSocket connections. No method of electronic transmission or
-      storage is completely secure, but we use reasonable safeguards appropriate
-      to the limited information handled by the App.
+      Production multiplayer connections use HTTPS. Firebase access is protected
+      by anonymous authentication and Realtime Database security rules. No method
+      of electronic transmission or storage is completely secure, but we use
+      reasonable safeguards appropriate to the limited information handled by the
+      App.
     </p>
 
     <h2>Changes to this policy</h2>
