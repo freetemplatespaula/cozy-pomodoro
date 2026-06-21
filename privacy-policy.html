@@ -64,7 +64,9 @@
     <h2>Information handled by the App</h2>
     <p>
       The App does not ask for your name, email address, phone number, contacts,
-      precise location, advertising identifier, photos, or payment information.
+      precise location, advertising identifier, or payment information. On iOS,
+      you may optionally grant add-only Photos access when saving an achievement
+      image.
     </p>
     <p>
       The App may store timer choices, focus-session statistics, and a randomly
@@ -79,7 +81,8 @@
       anonymous sign-in and Firebase Realtime Database to operate multiplayer
       rooms. Multiplayer data may include a temporary anonymous Firebase user
       ID, selected character, room membership, room position, session duration,
-      room code, room timestamps, reactions, and pause or status indicators.
+      room code, room timestamps, reactions, pause or status indicators, and a
+      minimal connection event used to count daily multiplayer session joins.
     </p>
     <p>
       Other room participants receive only limited gameplay information, such as
@@ -95,6 +98,7 @@
       <li>provide focus timers and local progress statistics;</li>
       <li>create, find, and join multiplayer rooms;</li>
       <li>synchronize room timing, participants, statuses, and reactions;</li>
+      <li>count multiplayer session joins;</li>
       <li>prevent abuse and protect multiplayer rooms; and</li>
       <li>diagnose service failures and maintain security.</li>
     </ul>
@@ -117,19 +121,29 @@
     <h2>Images and device permissions</h2>
     <p>
       If you choose to save or share an achievement image, the App creates the
-      image on your device and uses Android system features to save it to your
-      gallery or pass it to an app you select. The App also uses vibration for
-      interface feedback.
+      image on your device and uses Android or iOS system features to save it to
+      your gallery or Photos library, or pass it to an app you select. The App
+      does not read your existing Photos library.
+    </p>
+    <p>
+      On iOS, you may optionally allow local notifications. The App schedules a
+      local notification for the end of an active focus session. Notification
+      scheduling is handled on the device and does not send notification content
+      to our server. The App also uses vibration where supported for interface
+      feedback.
     </p>
 
     <h2>Data retention and deletion</h2>
     <p>
-      Local focus statistics and the random installation identifier remain on
-      your device until you clear the App's data or uninstall the App.
+      Local focus statistics, active timer state, and the random installation
+      identifier remain on your device until you clear the App's data or
+      uninstall the App.
       Short-lived room records are designed for Pomodoro sessions and expire
-      after they are no longer needed to operate the room. Firebase operational
-      and security logs may be retained for a limited period as necessary to
-      protect and maintain the service.
+      after they are no longer needed to operate the room. Daily multiplayer
+      connection events may remain in Firebase so we can count session joins and
+      understand basic service usage. Firebase operational and security logs may
+      be retained for a limited period as necessary to protect and maintain the
+      service.
     </p>
     <p>
       To request deletion of server-side data associated with your anonymous
