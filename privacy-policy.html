@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
-  <title>Privacy Policy - Cozy Pomodoro Garden</title>
+  <title>Privacy Policy - Cozy Timer</title>
   <style>
     :root {
       color: #563344;
@@ -52,11 +52,11 @@
 </head>
 <body>
   <main>
-    <h1>Privacy Policy for Cozy Pomodoro Garden</h1>
-    <p class="updated"><strong>Effective date:</strong> June 10, 2026</p>
+    <h1>Privacy Policy for Cozy Timer</h1>
+    <p class="updated"><strong>Effective date:</strong> June 24, 2026</p>
 
     <p>
-      This Privacy Policy explains how Cozy Pomodoro Garden ("the App") handles
+      This Privacy Policy explains how Cozy Timer ("the App") handles
       information. The App is provided by Free Templates Paula ("we", "us", or
       "our").
     </p>
@@ -64,9 +64,7 @@
     <h2>Information handled by the App</h2>
     <p>
       The App does not ask for your name, email address, phone number, contacts,
-      precise location, advertising identifier, or payment information. On iOS,
-      you may optionally grant add-only Photos access when saving an achievement
-      image.
+      precise location, advertising identifier, photos, or payment information.
     </p>
     <p>
       The App may store timer choices, focus-session statistics, and a randomly
@@ -85,6 +83,13 @@
       minimal connection event used to count daily multiplayer session joins.
     </p>
     <p>
+      The App may also write daily aggregate counters to Firebase, such as
+      session starts, selected durations, room mode, selected character, session
+      completion or early stop counts, and reaction totals. These aggregate
+      counters do not store your Firebase user ID, installation identifier, room
+      code, or a per-session history.
+    </p>
+    <p>
       Other room participants receive only limited gameplay information, such as
       the selected character, room position, status, and reactions. They do not
       receive your installation identifier, authentication tokens, email
@@ -98,7 +103,7 @@
       <li>provide focus timers and local progress statistics;</li>
       <li>create, find, and join multiplayer rooms;</li>
       <li>synchronize room timing, participants, statuses, and reactions;</li>
-      <li>count multiplayer session joins;</li>
+      <li>understand aggregate session usage, completion, and reaction trends;</li>
       <li>prevent abuse and protect multiplayer rooms; and</li>
       <li>diagnose service failures and maintain security.</li>
     </ul>
@@ -110,6 +115,13 @@
       multiplayer room storage, and secure room synchronization. Firebase may
       process network and technical information, including IP addresses and
       service logs, as necessary to deliver and secure the service.
+    </p>
+    <p>
+      Release builds may use Sentry to collect crash reports and application
+      error diagnostics. Sentry is configured without default personal
+      information, scene tree attachments, or log capture. We do not send
+      Firebase user IDs, installation identifiers, room codes, names, email
+      addresses, or advertising identifiers to Sentry.
     </p>
     <p>
       The App can open your device's sharing interface or external apps such as
@@ -141,8 +153,11 @@
       Short-lived room records are designed for Pomodoro sessions and expire
       after they are no longer needed to operate the room. Daily multiplayer
       connection events may remain in Firebase so we can count session joins and
-      understand basic service usage. Firebase operational and security logs may
-      be retained for a limited period as necessary to protect and maintain the
+      understand basic service usage. Daily aggregate usage counters may remain
+      in Firebase to understand session duration, completion, room mode,
+      character, and reaction trends. Crash and error reports may remain in
+      Sentry for diagnosis. Firebase operational and security logs may be
+      retained for a limited period as necessary to protect and maintain the
       service.
     </p>
     <p>
